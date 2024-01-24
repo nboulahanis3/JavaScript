@@ -5,64 +5,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adding JavaScript to HTML</title>
+    <title>Assessment 01</title>
     <link rel="stylesheet" href="css/styles.css">
-
     <script>
-    function myfunction(){ document.getElementById("sample").innerHTML="Changed from a function in the head section"}
+    function myFunction() {document.getElementById('sample').innerHTML="I've Been Everywhere"}
     </script>
-    <script src="scripts/script.js"></script>
+    <script src="scripts/scripts.js"></script>
 </head>
 
 <body>
     <header>
-        <h1>Adding JavaScript to HTML</h1>
+        <h1>Assessment 01</h1>
     </header>
     <main>
 
-        <button type="button" onclick="myfunction()">Call Function in Head section</button>
-        <p id="start"></p>
-        <button type="button" onclick="myfunction2()">Call Function in External Script</button>
+        <button type="button" onclick="myFunction()">Where Have I Been?</button>
         <p id="start"></p>
         <script>
-            document.getElementById("start").innerHTML = "JavaScript inside the script tag."
+            document.getElementById('start').innerHTML = 'Nick Boulahanis'
+
         </script>
+       <p id="sample">
+        I've Been Everywhere
+       </p> 
+       <button type="button" onclick = "document.getElementById('sample').innerHTML = 'Charlotte, Cabo and Denver' ">Place's I've Traveled Too Last Year</button>
+       <div class="buttons">
+        <button onclick="document.getElementById('place').src='images/13BoulahanisPhotos.JPG'">charlotte</button>
+        <button onclick="document.getElementById('place').src='images/cabo.jpg'">cabo</button>
+        <button onclick="document.getElementById('place').src='images/denver-790472_1280.jpg'">denver</button>
+       </div>
 
-        <p id="sample">
-            This paragraph has an ID of sample
-        </p>
-        <button type="button" onclick = 'document.getElementById("sample").innerHTML = "Nick Boulahanis" '>Click Here!</button>
-        <button type="button" onclick='document.getElementById("sample").style.fontsize ="30px";"Nick Boulahanis" '>Bigger</button>
-        <div class="buttons">
-            <button onclick="document.getElementById('pet').src='images/dog.jpg'">dog</button>
-            <button onclick="document.getElementById('pet').src='images/cat.jpg'">cat</button>
-        </div>
-
-        <img src="images/dog.jpg" alt="animal" id="pet" class="center">
-        <div class="buttons">
-            <button onclick="document.getElementById('pet').style.display='block'">show</button>
-            <button onclick="document.getElementById('pet').style.display='none'">hide</button>
-        </div>
-
-        <div id="output">
-            <h2>Output</h2>
-            <script>
-                document.write('document.write');
-            </script>
-            <p id="oops"></p>
-            <button onclick="document.write('OOOPS!')">OOOPS</button>
-            <script>
-                alert( "Wow, This is an alert")
-            </script>
-
-            <script>
-                console.log("This is my log")
-            </script>
-        </div>
+       <img src="images/13BoulahanisPhotos.JPG" alt="charlotte" id="place" class="center">
+       <button onclick="document.getElementById('place').style.display='block'">show</button>
+        <button onclick="document.getElementById('place').style.display='none'">hide</button>
     </main>
-    <footer>
-        <p>&copy;2024 Nick Boulahanis</p>
-    </footer>
 </body>
-
-</html>
